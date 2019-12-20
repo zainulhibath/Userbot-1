@@ -17,7 +17,7 @@ clear
 pkg update && pkg upgrade -y
 pkg install clang curl git libcrypt libffi libiconv libjpeg* libjpeg-turbo libwebp libxml2 libxslt make ndk-sysroot openssl postgresql python readline wget zlib -y
 
-git clone https://github.com/AvinashReddy3108/PaperplaneExtended.git
+git clone https://github.com/Spyderzz/Userbot.git
 cd PaperplaneExtended
 
 pip install --upgrade pip setuptools
