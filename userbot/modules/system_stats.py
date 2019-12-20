@@ -126,7 +126,7 @@ async def amireallyalive(alive):
                      "My bot is running \n\n"
                      f"Telethon version: {version.__version__} \n"
                      f"Python: {python_version()} \n"
-                     f"User: {DEFAULTUSER}"
+                     f"User:" + f"[{name0}](tg://user?id={uid})",
                      "`")
 
 

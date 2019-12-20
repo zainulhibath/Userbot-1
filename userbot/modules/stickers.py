@@ -29,6 +29,8 @@ KANGING_STR = [
     "Roses are red violets are blue, kanging this sticker so my pacc looks cool",
     "Imprisoning this sticker...",
     "Mr.Steal Your Sticker is stealing this sticker... ",
+    "Imma Kanger...",
+    "Owner of this stiker got rekt",
 ]
 
 
@@ -74,7 +76,7 @@ async def kang(args):
             await args.edit("`Unsupported File!`")
             return
     else:
-        await args.edit("`I can't kang that...`")
+        await args.edit("`Bsd I can't kang that...`")
         return
 
     if photo:

@@ -140,7 +140,7 @@ async def promote(promt):
     try:
         await promt.client(
             EditAdminRequest(promt.chat_id, user.id, new_rights, rank))
-        await promt.edit("`Promoted Successfully!`")
+        await promt.edit("`Promoted Successfully!,Now gib Party`")
 
     # If Telethon spit BadRequestError, assume
     # we don't have Promote permission
@@ -195,7 +195,7 @@ async def demote(dmod):
     except BadRequestError:
         await dmod.edit(NO_PERM)
         return
-    await dmod.edit("`Demoted Successfully!`")
+    await dmod.edit("`Demoted Successfully!, GTFO`")
 
     # Announce to the logging group if we have demoted successfully
     if BOTLOG:
@@ -287,7 +287,7 @@ async def nothanos(unbon):
     try:
         await unbon.client(
             EditBannedRequest(unbon.chat_id, user.id, UNBAN_RIGHTS))
-        await unbon.edit("```Unbanned Successfully```")
+        await unbon.edit("```Unbanned Successfully ;)```")
 
         if BOTLOG:
             await unbon.client.send_message(
@@ -295,7 +295,7 @@ async def nothanos(unbon):
                 f"USER: [{user.first_name}](tg://user?id={user.id})\n"
                 f"CHAT: {unbon.chat.title}(`{unbon.chat_id}`)")
     except UserIdInvalidError:
-        await unbon.edit("`Uh oh my unban logic broke!`")
+        await unbon.edit("`Uh Oh! My unban logic broke!`")
 
 
 @register(outgoing=True, pattern="^.mute(?: |$)(.*)", groups_only=True)
@@ -346,7 +346,7 @@ async def spider(spdr):
             if reason:
                 await spdr.edit(f"`Safely taped !!`\nReason: {reason}")
             else:
-                await spdr.edit("`Safely taped !!`")
+                await spdr.edit("`Haha! Safely taped !!`")
 
             # Announce to logging group
             if BOTLOG:
@@ -557,7 +557,7 @@ async def rm_deletedacc(show):
         await show.edit("`I am not an admin here!`")
         return
 
-    await show.edit("`Deleting deleted accounts...\nOh I can do that?!?!`")
+    await show.edit("`Deleting Deleted accounts...`")
     del_u = 0
     del_a = 0
 
@@ -615,7 +615,7 @@ async def get_admin(show):
         await show.edit(mentions, parse_mode="html")
     except MessageTooLongError:
         await show.edit(
-            "Damn, too many admins here. Uploading admin list as file.")
+            "Damn, too many Admins here. Uploading Admin list as file.")
         file = open("adminlist.txt", "w+")
         file.write(mentions)
         file.close()
@@ -780,7 +780,7 @@ async def get_users(show):
         await show.edit(mentions)
     except MessageTooLongError:
         await show.edit(
-            "Damn, this is a huge group. Uploading users lists as file.")
+            "Damn, this is a huge af group. Uploading users lists as file.")
         file = open("userslist.txt", "w+")
         file.write(mentions)
         file.close()

@@ -27,7 +27,7 @@ async def kbg(remob):
     if remob.reply_to_msg_id:
         message_id = remob.reply_to_msg_id
         reply_message = await remob.get_reply_message()
-        await remob.edit("`Processing..`")
+        await remob.edit("`Photoshopping xD...`")
         try:
             if isinstance(
                     reply_message.media, MessageMediaPhoto
@@ -57,7 +57,7 @@ async def kbg(remob):
             await remob.client.send_file(
                 remob.chat_id,
                 remove_bg_image,
-                caption="Background removed using remove.bg",
+                caption="Killed that Distracting Background !",
                 force_document=True,
                 reply_to=message_id)
             await remob.delete()

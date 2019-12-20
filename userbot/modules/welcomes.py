@@ -133,7 +133,7 @@ async def show_welcome(event):
         await event.reply(msg_o.message, file=msg_o.media)
     elif cws and cws.reply:
         await event.edit(
-            "`I am currently welcoming new users with this welcome note.`")
+            "`I am currently welcoming new niggs with this welcome note.`")
         await event.reply(cws.reply)
 
 

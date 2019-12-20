@@ -76,7 +76,7 @@ async def okgoogle(img):
         if guess and imgspage:
             await img.edit(f"[{guess}]({fetchUrl})\n\n`Looking for images...`")
         else:
-            await img.edit("`Couldn't find anything for your uglyass.`")
+            await img.edit("`Couldn't find anything for your dumbfuck ass.`")
             return
 
         if img.pattern_match.group(1):

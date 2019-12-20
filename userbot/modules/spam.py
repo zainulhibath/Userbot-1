@@ -34,6 +34,23 @@ async def tmeme(e):
         await e.client.send_message(
             BOTLOG_CHATID, "#WSPAM\n"
             "WSpam was executed successfully")
+            
+            
+@register(outgoing=True, pattern="^.bigspam")
+async def bigspam(e):
+    if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
+        message = e.text
+        counter = int(message[9:13])
+        spam_message = str(e.text[13:])
+        for i in range(1, counter):
+            await e.respond(spam_message)
+        await e.delete()
+        if BOTLOG:
+            await e.client.send_message(
+                BOTLOG_CHATID,
+                "#BIGSPAM \n\n"
+                "Bigspam was executed successfully"
+                )
 
 
 @register(outgoing=True, pattern="^.spam (.*)")
@@ -75,6 +92,63 @@ async def spammer(e):
         await e.client.send_message(
             BOTLOG_CHATID, "#DelaySPAM\n"
             "DelaySpam was executed successfully")
+            
+            @register(outgoing=True, pattern="^.gangsta$")
+async def whoizme(e):
+    if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
+        await e.edit("EVERyBOdy")
+        await asyncio.sleep(0.3)
+        await e.edit("iZ")
+        await asyncio.sleep(0.2)
+        await e.edit("GangSTur")
+        await asyncio.sleep(0.5)
+        await e.edit("UNtIL ")
+        await asyncio.sleep(0.2)
+        await e.edit("I")
+        await asyncio.sleep(0.3)
+        await e.edit("ArRivE")
+        await asyncio.sleep(0.3)
+        await e.edit("🔥")
+        await asyncio.sleep(0.3)
+        await e.edit("EVERyBOdy iZ GangSTur UNtIL I ArRivE 🔥")
+
+        
+@register(outgoing=True, pattern="^.nikal$")
+async def whoizme(e):
+    if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
+        await e.edit("NikAl")
+        await asyncio.sleep(0.3)
+        await e.edit("lAwDe")
+        await asyncio.sleep(0.2)
+        await e.edit("PehLi")
+        await asyncio.sleep(0.5)
+        await e.edit("FuRsaT")
+        await asyncio.sleep(0.2)
+        await e.edit("Me")
+        await asyncio.sleep(0.3)
+        await e.edit("NikAl")
+        await asyncio.sleep(0.3)
+        await e.edit("<--")
+        await asyncio.sleep(0.3)
+        await e.edit("NikAl lAwDe PehLi FuRsaT Me NikAL <--")
+
+
+@register(outgoing=True, pattern="^.repeat")
+async def repeat(e):
+    message = e.text[10:]
+    count = int(e.text[8:10])
+    repmessage = message * count
+    await e.respond(repmessage)
+    await e.delete()
+    
+    
+@register(outgoing=True, pattern="^.repeats")
+async def repeats(e):
+    message = e.text[10:]
+    count = int(e.text[8:10])
+    repmessage = message * count
+    await wait([e.respond(repmessage)for i in range(count)])
+    await e.delete()
 
 
 CMD_HELP.update({
@@ -89,5 +163,9 @@ CMD_HELP.update({
 \nUsage: As if text spam was not enough !!\
 \n\n.delayspam <delay> <count> <text>\
 \nUsage: .bigspam but with custom delay.\
-\n\n\nNOTE : Spam at your own risk !!"
+\n\n.gangsta\
+\nUsage: Gives you Gengster Feeling, btw Spyder is real Gangsta.\
+\n\n.nikal\
+\nUsage: Prevents Lawda Lassun.\
+\n\n\nNOTE : I am not responsible if you get banned for spamming!"
 })
