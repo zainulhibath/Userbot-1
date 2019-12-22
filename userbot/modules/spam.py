@@ -93,7 +93,7 @@ async def spammer(e):
             BOTLOG_CHATID, "#DelaySPAM\n"
             "DelaySpam was executed successfully")
             
-            @register(outgoing=True, pattern="^.gangsta")
+@register(outgoing=True, pattern="^.gangsta")
 async def whoizme(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("EVERyBOdy")
