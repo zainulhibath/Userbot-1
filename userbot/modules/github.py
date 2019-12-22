@@ -1,10 +1,6 @@
 import aiohttp
-from userbot.events import register, errors_handler
-from userbot import CMD_HELP
-
 
 @register(pattern=r".git (.*)", outgoing=True)
-@errors_handler
 async def github(event):
     URL = f"https://api.github.com/users/{event.pattern_match.group(1)}"
     chat = await event.get_chat()
@@ -47,6 +43,3 @@ async def github(event):
                     REPLY += f"[{result[nr].get('name', None)}]({result[nr].get('html_url', None)})\n"
 
                 await event.edit(REPLY)
-
-
-CMD_HELP.update({"git": "Like .whois but for GitHub usernames."})
