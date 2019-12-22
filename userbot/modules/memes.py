@@ -1174,13 +1174,7 @@ async def insult(e):
 @register(outgoing=True, pattern="^.pro$")
 async def insult(e):
     """ Insult some Pros """
-    await e.edit(choice(PRO_STRINGS))                 
-
-			  			  
-@register(outgoing=True, pattern="^.thanos$")
-async def insult(e):
-    """ I make you cry !! """
-    await e.edit(choice(THANOS_STRING))
+    await e.edit(choice(PRO_STRINGS))
 			  
               
 @register(outgoing=True, pattern="^.abusehard$")
@@ -1339,8 +1333,6 @@ CMD_HELP.update({
 \n\n.mock\
 \n\n.abusehard\
 \nUsage: You already got that! Ain't?.\
-\n\n.thanos\
-\nUsage: Try and then Snap.\
 \n\n.noob\
 \nUsage: Whadya want to know? Are you a NOOB?\
 \n\n.pro\
