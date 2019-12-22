@@ -864,10 +864,9 @@ async def insult(e):
     
     
 @register(outgoing=True, pattern="^.noob$")
-async def metoo(hahayes):
-    """ Haha yes """
-    if not hahayes.text[0].isalpha() and hahayes.text[0] not in ("/", "#", "@", "!"):
-        await hahayes.edit(random.choice(NOOBSTR))
+async def insult(e):
+    """ I make you cry !! """
+    await e.edit(choice(NOOBSTR))
 
 
 @register(outgoing=True, pattern="^.cp(?: |$)(.*)")
@@ -1167,57 +1166,39 @@ async def killing (killed):
 
 
 @register(outgoing=True, pattern="^.rape$")
-async def raping (raped):
-    """ Dont Rape Too much -_-"""
-    if not raped.text[0].isalpha() and raped.text[0] not in ("/", "#", "@", "!"):
-        index = random.randint(0, len(RAPE_STRINGS) - 1)
-        reply_text = RAPE_STRINGS[index]
-        await raped.edit(reply_text)
+async def insult(e):
+    """ Don't Rape too much """
+    await e.edit(choice(RAPE_STRINGS)) 
 			  
              
 @register(outgoing=True, pattern="^.pro$")
-async def proo (pros):
-    """ String for Pros only -_-"""
-    if not pros.text[0].isalpha() and pros.text[0] not in ("/", "#", "@", "!"):
-        index = random.randint(0, len(PRO_STRINGS) - 1)
-        reply_text = PRO_STRINGS[index]
-        await pros.edit(reply_text)
+async def insult(e):
+    """ Insult some Pros """
+    await e.edit(choice(PRO_STRINGS))                 
 
 			  			  
 @register(outgoing=True, pattern="^.thanos$")
-async def thanos (thanos):
-    """ String for thanos only -_-"""
-    if not thanos.text[0].isalpha() and thanos.text[0] not in ("/", "#", "@", "!"):
-        index = random.randint(0, len(THANOS_STRINGS) - 1)
-        reply_text = THANOS_STRINGS[index]
-        await thanos.edit(reply_text)	
+async def insult(e):
+    """ I make you cry !! """
+    await e.edit(choice(THANOS_STRING))
 			  
               
 @register(outgoing=True, pattern="^.abusehard$")
-async def fuckedd (abusehard):
-    """ Dont Use this Too much bsdk -_-"""
-    if not abusehard.text[0].isalpha() and abusehard.text[0] not in ("/", "#", "@", "!"):
-        index = random.randint(0, len(ABUSEHARD_STRING) - 1)
-        reply_text = ABUSEHARD_STRING[index]
-        await abusehard.edit(reply_text)
+async def insult(e):
+    """ Don't use these too much bsdk """
+    await e.edit(choice(ABUSEHARD_STRING))
 			  
 			  
 @register(outgoing=True, pattern="^.gey$")
-async def geys (geyed):
-    """ Use only for gey ppl -_-"""
-    if not geyed.text[0].isalpha() and geyed.text[0] not in ("/", "#", "@", "!"):
-        index = random.randint(0, len(GEY_STRINGS) - 1)
-        reply_text = GEY_STRINGS[index]
-        await geyed.edit(reply_text)
+async def insult(e):
+    """ Use only for gey ppl  """
+    await e.edit(choice(GEY_STRINGS))
 			  
 			  
 @register(outgoing=True, pattern="^.abuse$")
-async def abusing (abused):
-    """ Dont Abuse Too much bsdk -_-"""
-    if not abused.text[0].isalpha() and abused.text[0] not in ("/", "#", "@", "!"):
-        index = random.randint(0, len(ABUSE_STRINGS) - 1)
-        reply_text = ABUSE_STRINGS[index]
-        await abused.edit(reply_text)
+async def insult(e):
+    """ Don't Abuse too much BSDK """
+    await e.edit(choice(ABUSE_STRINGS))
 
 
 @register(outgoing=True, pattern=r"^.f (.*)")
@@ -1358,10 +1339,6 @@ CMD_HELP.update({
 \n\n.mock\
 \n\n.abusehard\
 \nUsage: You already got that! Ain't?.\
-\n\n.chu\
-\nUsage: Incase, the person infront of you is....\
-\n\n.fuk\
-\nUsage: The onlu word that can be used fucking everywhere.\
 \n\n.thanos\
 \nUsage: Try and then Snap.\
 \n\n.noob\
