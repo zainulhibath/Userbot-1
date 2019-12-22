@@ -1161,7 +1161,7 @@ async def killing (killed):
     if not killed.text[0].isalpha() and killed.text[0] not in ("/", "#", "@", "!"):
         if await killed.get_reply_message():
             await killed.edit(
-                "`Targeted `[user](tg://user?id={user_id})` killed by Headshot 😈......`\n"
+                "`Targeted user killed by Headshot 😈......`\n"
 		        "#Sad_Reacts_Onli\n"
             )
 
