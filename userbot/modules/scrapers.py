@@ -40,7 +40,7 @@ from asyncio import sleep
 from userbot import CMD_HELP, BOTLOG, BOTLOG_CHATID, YOUTUBE_API_KEY, CHROME_DRIVER, GOOGLE_CHROME_BIN
 from userbot.events import register
 from telethon.tl.types import DocumentAttributeAudio
-from userbot.modules.upload_download import progress, humanbytes, time_formatter
+from userbot.modules.upload_download import progress, humanbytes, 
 
 CARBONLANG = "auto"
 TTS_LANG = "en"
@@ -647,7 +647,7 @@ async def download_video(v_url):
     if song:
         await v_url.edit(f"`Preparing to upload song:`\
         \n**{rip_data['title']}**\
-        \nby *{rip_data['uploader']}*")
+        \nby __{rip_data['uploader']}__")
         await v_url.client.send_file(
             v_url.chat_id,
             f"{rip_data['id']}.mp3",
@@ -666,7 +666,7 @@ async def download_video(v_url):
     elif video:
         await v_url.edit(f"`Preparing to upload video:`\
         \n**{rip_data['title']}**\
-        \nby *{rip_data['uploader']}*")
+        \nby __{rip_data['uploader']}__")
         await v_url.client.send_file(
             v_url.chat_id,
             f"{rip_data['id']}.mp4",
