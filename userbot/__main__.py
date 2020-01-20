@@ -30,7 +30,7 @@ for module_name in ALL_MODULES:
 LOGS.info("You are running Paperplane Extended [v5.0]")
 
 LOGS.info("Congratulations, your userbot is now running !!"
-          "Test it by typing .alive in any chat.")
+          "Test it by typing .alive in any chat. By @ZainsTech")
 
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
