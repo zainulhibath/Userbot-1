@@ -17,9 +17,9 @@ from userbot.events import register
 
 # ========================= CONSTANTS ============================
 UNAPPROVED_MSG = ("`Hello, I'm Jarvis, personal manager of Zain's Tech.`\n\n"
-                  "`As you can see he got SCAM Tag due to lots of haters 😂.`"
-                  "`There for we changed this account to another`\n\n"
-                  "`you won't get responses here, if you wanna contact him directly just go to @ZainsTech‚`")
+                  "`He is a busy guy, so don't spam here ( SPAM=Block)⚠️.`"
+                  "`Join his channels-`@Zains_Shop, @ZainsProjects\n\n"
+                  "`if you need faster reply just Deposite 20K$ 💵 in his account and send screenshot here 😂‚`")
 # =================================================================
 
 
